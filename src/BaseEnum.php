@@ -118,4 +118,21 @@ abstract class BaseEnum
         return in_array($key, static::getKeys());
     }
 
+    /**
+     * Checks if a key exists in constant names if yes then return value.
+     *
+     * @param string $key
+     *
+     * @return bool
+     * @throws \ReflectionException
+     */
+    public static function getValueIfHasKey($key)
+    {
+        $value = false;
+        if(in_array($key, static::getKeys())){
+            $value = static::getValueByKey($key);
+        }
+        return $value;
+    }
+
 }
