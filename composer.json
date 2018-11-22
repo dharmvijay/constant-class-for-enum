@@ -1,0 +1,30 @@
+{
+    "name": "dharmvijay/constant-class-for-enum",
+    "description": "Base enum class with some features.",
+    "version": "v0.1.1",
+    "type": "helper",
+    "license": "MIT",
+    "keywords": ["laravel", "cakephp", "enum"],
+    "homepage": "https://github.com/dharmvijay/constant-class-for-enum",
+    "autoload": {
+        "psr-4": {
+            "WBoyz\\LaravelEnum\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bertalan Verebelyi",
+            "email": "bertalan.verebelyi@gmail.com"
+        },
+        {
+            "name": "Csaba Verebelyi",
+            "email": "csaba.verebelyi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.3.*"
+    }
+}

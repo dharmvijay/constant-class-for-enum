@@ -1,0 +1,64 @@
+<?php
+
+class Fruits extends \Dharmvijay\ConstantClassForEnum\BaseEnum
+{
+    const PEACH = 2;
+    const PEAR = 3;
+}
+
+class EnumTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * @test
+     */
+    public function it_has_a_default_value()
+    {
+        $default = Fruits::getValueByKey('MELON');
+        $this->assertEquals(0, $default);
+    }
+
+    /**
+     * @test
+     */
+    public function it_can_get_an_element_by_key()
+    {
+        $value = Fruits::getValueByKey('PEACH');
+        $this->assertEquals(2, $value);
+    }
+
+    /**
+     * @test
+     */
+    public function it_has_a_specific_key()
+    {
+        $value = Fruits::hasKey('PEACH');
+        $this->assertEquals(true, $value);
+    }
+
+    /**
+     * @test
+     */
+    public function it_has_not_a_specific_key()
+    {
+        $value = Fruits::hasKey('APPLE');
+        $this->assertEquals(false, $value);
+    }
+
+    /**
+     * @test
+     */
+    public function it_has_a_specific_value()
+    {
+        $value = Fruits::hasValue(2);
+        $this->assertEquals(true, $value);
+    }
+
+    /**
+     * @test
+     */
+    public function it_has_not_a_specific_value()
+    {
+        $value = Fruits::hasValue('nothing');
+        $this->assertEquals(false, $value);
+    }
+}
