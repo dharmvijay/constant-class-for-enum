@@ -1,6 +1,6 @@
 {
     "name": "dharmvijay/constant-class-for-enum",
-    "description": "Base enum class with some features.",
+    "description": "Base constant class to create constants for enum and different other general purposes with some other features like check exist ,get values ,get keys... etc.",
     "version": "v0.1.1",
     "type": "helper",
     "license": "MIT",
